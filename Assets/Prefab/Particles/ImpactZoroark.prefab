@@ -23969,7 +23969,7 @@ GameObject:
   - component: {fileID: 3264938439319706103}
   - component: {fileID: -4673380999944356009}
   m_Layer: 0
-  m_Name: Impact
+  m_Name: ImpactZoroark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

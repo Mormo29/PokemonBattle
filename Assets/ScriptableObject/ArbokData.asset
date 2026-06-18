@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae96be9ed2db194d85aa17eccbf7760, type: 3}
   m_Name: ArbokData
   m_EditorClassIdentifier: Assembly-CSharp::FighterData
-  maxHealth: 0
+  maxHealth: 300
   fightername: Arbok
   attacks:
-  - name: 
-    animationName: 
-    minDamage: 0
-    maxDamage: 0
-    chargeParticles: {fileID: 0}
-    attackParticles: {fileID: 0}
-  - name: 
-    animationName: 
-    minDamage: 0
-    maxDamage: 0
-    chargeParticles: {fileID: 0}
-    attackParticles: {fileID: 0}
+  - name: Fire Fang
+    animationName: Attack2
+    minDamage: 100
+    maxDamage: 120
+    chargeParticles: {fileID: 258775175802445545, guid: 5cc681c50d07070489126bd81e39356a, type: 3}
+    attackParticles: {fileID: 3823494570899748175, guid: a6012876615a8ae41b1657debd28dc8f, type: 3}
+  - name: Poison Sting
+    animationName: Attack1
+    minDamage: 120
+    maxDamage: 180
+    chargeParticles: {fileID: 258775175802445545, guid: 5cc681c50d07070489126bd81e39356a, type: 3}
+    attackParticles: {fileID: 629796209523375240, guid: 2b6de53e6200438448e6cc103b747bf9, type: 3}
