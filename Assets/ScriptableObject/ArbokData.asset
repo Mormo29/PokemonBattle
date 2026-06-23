@@ -24,6 +24,7 @@ MonoBehaviour:
   - name: Poison Sting
     animationName: Attack1
     minDamage: 120
-    maxDamage: 180
+    maxDamage: 150
     chargeParticles: {fileID: 258775175802445545, guid: 5cc681c50d07070489126bd81e39356a, type: 3}
     attackParticles: {fileID: 629796209523375240, guid: 2b6de53e6200438448e6cc103b747bf9, type: 3}
+  chargeTime: 2

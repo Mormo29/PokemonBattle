@@ -1825,7 +1825,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Victory1
+      name: Victory
       takeName: bd_victory
       internalID: 7810496302438185144
       firstFrame: 0

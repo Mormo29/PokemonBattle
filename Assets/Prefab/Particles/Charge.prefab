@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5283717140973126891}
   - component: {fileID: 5323385317901640288}
   - component: {fileID: 3012295891255522601}
+  - component: {fileID: 3199004764826088226}
   m_Layer: 0
   m_Name: Charge
   m_TagString: Untagged
@@ -4825,3 +4826,16 @@ MonoBehaviour:
     shakesDelay: 0
   animatedLights: []
   fadeOutReference: {fileID: 0}
+--- !u!114 &3199004764826088226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258775175802445545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c482ec0cd115cc4ab14b97d94b3c225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyInSeconds
+  secondsToDestroy: 2
