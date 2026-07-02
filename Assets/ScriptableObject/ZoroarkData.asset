@@ -17,13 +17,20 @@ MonoBehaviour:
   attacks:
   - name: Night Slash
     animationName: Attack1
+    attackSoundName: Zoroark_attack1
     minDamage: 100
     maxDamage: 150
     chargeParticles: {fileID: 258775175802445545, guid: 5cc681c50d07070489126bd81e39356a, type: 3}
     attackParticles: {fileID: 5536337372424524899, guid: 9fe9ee34c4eb4f9479e603e65e720050, type: 3}
   - name: Night Daze
     animationName: Attack2
+    attackSoundName: Zoroark_attack2
     minDamage: 90
     maxDamage: 100
     chargeParticles: {fileID: 258775175802445545, guid: 5cc681c50d07070489126bd81e39356a, type: 3}
     attackParticles: {fileID: 1935215301441297543, guid: cb8956e267bc6b445a1777796a242d5d, type: 3}
+  chargeTime: 2
+  appearParticles: {fileID: 258775175802445545, guid: 5cc681c50d07070489126bd81e39356a, type: 3}
+  appearSoundName: Zoroark_appear
+  damageSoundName: Zoroark_damage
+  deadSoundName: Zoroark_dead

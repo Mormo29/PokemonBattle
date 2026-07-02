@@ -4788,6 +4788,7 @@ GameObject:
   - component: {fileID: 1580530338638254919}
   - component: {fileID: 313144251008387973}
   - component: {fileID: 7499548979216182945}
+  - component: {fileID: 4918906130727099327}
   m_Layer: 0
   m_Name: FireFang
   m_TagString: Untagged
@@ -9602,6 +9603,19 @@ MonoBehaviour:
     perlinColor: 0
     perlinColorSpeed: 0
   fadeOutReference: {fileID: 1580530338638254919}
+--- !u!114 &4918906130727099327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3823494570899748175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c482ec0cd115cc4ab14b97d94b3c225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyInSeconds
+  secondsToDestroy: 2
 --- !u!1 &6324892627873788507
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,14 +17,20 @@ MonoBehaviour:
   attacks:
   - name: Fire Fang
     animationName: Attack2
+    attackSoundName: Arbok_attack2
     minDamage: 100
     maxDamage: 120
     chargeParticles: {fileID: 258775175802445545, guid: 5cc681c50d07070489126bd81e39356a, type: 3}
     attackParticles: {fileID: 3823494570899748175, guid: a6012876615a8ae41b1657debd28dc8f, type: 3}
   - name: Poison Sting
     animationName: Attack1
+    attackSoundName: Arbok_attack1
     minDamage: 120
     maxDamage: 150
     chargeParticles: {fileID: 258775175802445545, guid: 5cc681c50d07070489126bd81e39356a, type: 3}
     attackParticles: {fileID: 629796209523375240, guid: 2b6de53e6200438448e6cc103b747bf9, type: 3}
   chargeTime: 2
+  appearParticles: {fileID: 258775175802445545, guid: 5cc681c50d07070489126bd81e39356a, type: 3}
+  appearSoundName: Arbok_appear
+  damageSoundName: Arbok_damage
+  deadSoundName: Arbok_dead
