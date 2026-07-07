@@ -11,12 +11,17 @@ public class FightManager : MonoBehaviour
     [SerializeField]
     private UnityEvent onFightStart;
     [SerializeField]
+    private UnityEvent<string> onFightEnd;
+    [SerializeField]
+    private UnityEvent<DamageTarget> onDamageTaken;
+    [SerializeField]
     private int minimumFighters = 2;
     [SerializeField]
     private int maximumFighters = 2;
     [SerializeField]
     private PoolManager poolManager;
     private List<Fighter> fighters = new List<Fighter>();
+    private DamageTarget damageTarget = new DamageTarget();
     public void AddFighter(Fighter fighter)
     {
         if (fighters.Count <maximumFighters && !fighters.Contains(fighter))
@@ -24,6 +29,7 @@ public class FightManager : MonoBehaviour
             poolManager.GetObject(fighter.FighterData.appearParticles, fighter.transform.position);
             SoundManager.instance.Play(fighter.FighterData.appearSoundName);
             fighters.Add(fighter);
+            DialogSystem.Instance.ShowDialog(fighter.FighterData.fighterName + "has joined the fight!");
             if (fighters.Count >= minimumFighters)
             {
                 onFightReady?.Invoke();
@@ -60,6 +66,7 @@ public class FightManager : MonoBehaviour
             attacker.transform.LookAt(attacker.transform);
             attacker.Animator.Play("Charge", 0, 0f);
             poolManager.GetObject(attackData.chargeParticles, attacker.transform.position);
+            DialogSystem.Instance.ShowDialog(attacker.FighterData.fighterName + "attacks with" + attackData.name + "!");
             yield return new WaitForSeconds(attacker.FighterData.chargeTime);
             attacker.Animator.Play(attackData.animationName, 0, 0f);
             SoundManager.instance.Play(attackData.attackSoundName);
@@ -67,11 +74,15 @@ public class FightManager : MonoBehaviour
             yield return new WaitForSeconds(attacker.Animator.GetCurrentAnimatorStateInfo(0).length);
             poolManager.GetObject(attackData.attackParticles, defender.transform.position);
             Health defenderHealth = defender.GetComponent<Health>();
-            defenderHealth.TakeDamage(Random.Range(attackData.minDamage, attackData.maxDamage));
+            SoundManager.instance.Play (defender.FighterData.damageSoundName);
+            float damage = Random.Range(attackData.minDamage, attackData.maxDamage);
+            defenderHealth.TakeDamage(damage);
+            onDamageTaken?.Invoke(damageTarget);
             if (defenderHealth.CurrentHealth <= 0)
             {
                 SoundManager.instance.Play(defender.FighterData.deadSoundName);
                 RemoveFighter(defender);
+                DialogSystem.Instance.ShowDialog(attacker.FighterData.fighterName + "wins the fight!");
                 FighterWin(attacker);
             }
             yield return new WaitForSeconds(1.5f);
@@ -79,6 +90,8 @@ public class FightManager : MonoBehaviour
     }
     private void FighterWin(Fighter winner)
     {
-        Debug.Log(winner.name + "wins the fight!");
+        onFightEnd?.Invoke(winner.FighterData.fighterName);
+        winner.Animator.Play("Victory", 0, 0f);
+        winner.transform.LookAt(Camera.main.transform);
     }
 }
