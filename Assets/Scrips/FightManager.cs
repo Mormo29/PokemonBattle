@@ -17,11 +17,12 @@ public class FightManager : MonoBehaviour
     [SerializeField]
     private int minimumFighters = 2;
     [SerializeField]
-    private int maximumFighters = 2;
+    private int maximumFighters = 4;
     [SerializeField]
     private PoolManager poolManager;
     private List<Fighter> fighters = new List<Fighter>();
     private DamageTarget damageTarget = new DamageTarget();
+    
     public void AddFighter(Fighter fighter)
     {
         if (fighters.Count <maximumFighters && !fighters.Contains(fighter))
@@ -30,6 +31,8 @@ public class FightManager : MonoBehaviour
             SoundManager.instance.Play(fighter.FighterData.appearSoundName);
             fighters.Add(fighter);
             DialogSystem.Instance.ShowDialog(fighter.FighterData.fighterName + "has joined the fight!");
+            fighter.Health.InitializeHealth();
+            fighter.Animator.Play("Idle", 0, 0f);
             if (fighters.Count >= minimumFighters)
             {
                 onFightReady?.Invoke();
@@ -45,6 +48,7 @@ public class FightManager : MonoBehaviour
     }
     public void StartFight()
     {
+        onFightStart?.Invoke();
         StartCoroutine(FightCoroutine());
     }
     private IEnumerator FightCoroutine()
@@ -76,6 +80,7 @@ public class FightManager : MonoBehaviour
             Health defenderHealth = defender.GetComponent<Health>();
             SoundManager.instance.Play (defender.FighterData.damageSoundName);
             float damage = Random.Range(attackData.minDamage, attackData.maxDamage);
+            damageTarget.SetDamageTarget(defender.transform, damage);
             defenderHealth.TakeDamage(damage);
             onDamageTaken?.Invoke(damageTarget);
             if (defenderHealth.CurrentHealth <= 0)

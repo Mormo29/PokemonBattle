@@ -27,7 +27,7 @@ public class DamageTarget
 {
     public Transform target;
     public float damage;
-    public void SetDamgeTarget(Transform target, float damage)
+    public void SetDamageTarget(Transform target, float damage)
     {
         this.target = target;
         this.damage = damage;

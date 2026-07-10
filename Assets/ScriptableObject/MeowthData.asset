@@ -13,24 +13,24 @@ MonoBehaviour:
   m_Name: MeowthData
   m_EditorClassIdentifier: Assembly-CSharp::FighterData
   maxHealth: 250
-  fightername: 
+  fighterName: 'Meowth '
   attacks:
   - name: Scratch
     animationName: Attack1
     attackSoundName: Meowth_attack1
     minDamage: 50
     maxDamage: 100
-    chargeParticles: {fileID: 258775175802445545, guid: 5cc681c50d07070489126bd81e39356a, type: 3}
+    chargeParticles: {fileID: 4418111963949774201, guid: bbf70dc0e6b19f549a85333a9049d5c8, type: 3}
     attackParticles: {fileID: 1407577010245944731, guid: 0dde5e2767bbab346a67a2b0c2229a3d, type: 3}
   - name: Fury Swipes
     animationName: Attack2
     attackSoundName: Meowth_attack2
     minDamage: 100
     maxDamage: 120
-    chargeParticles: {fileID: 258775175802445545, guid: 5cc681c50d07070489126bd81e39356a, type: 3}
+    chargeParticles: {fileID: 4418111963949774201, guid: bbf70dc0e6b19f549a85333a9049d5c8, type: 3}
     attackParticles: {fileID: 4620512902800588637, guid: f19d7faf16b215549addaa80d2ddfdad, type: 3}
   chargeTime: 2
-  appearParticles: {fileID: 258775175802445545, guid: 5cc681c50d07070489126bd81e39356a, type: 3}
+  appearParticles: {fileID: 4418111963949774201, guid: bbf70dc0e6b19f549a85333a9049d5c8, type: 3}
   appearSoundName: Meowth_appear
   damageSoundName: Meowth_damage
   deadSoundName: Meowth_dead
