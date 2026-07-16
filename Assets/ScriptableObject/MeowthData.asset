@@ -30,7 +30,7 @@ MonoBehaviour:
     chargeParticles: {fileID: 4418111963949774201, guid: bbf70dc0e6b19f549a85333a9049d5c8, type: 3}
     attackParticles: {fileID: 4620512902800588637, guid: f19d7faf16b215549addaa80d2ddfdad, type: 3}
   chargeTime: 2
-  appearParticles: {fileID: 4418111963949774201, guid: bbf70dc0e6b19f549a85333a9049d5c8, type: 3}
+  appearParticles: {fileID: 5059868061389064990, guid: 4e32f29ce1a15b043895a47e9da6c3dd, type: 3}
   appearSoundName: Meowth_appear
   damageSoundName: Meowth_damage
   deadSoundName: Meowth_dead

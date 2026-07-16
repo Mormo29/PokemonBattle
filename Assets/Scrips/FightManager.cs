@@ -87,8 +87,11 @@ public class FightManager : MonoBehaviour
             {
                 SoundManager.instance.Play(defender.FighterData.deadSoundName);
                 RemoveFighter(defender);
-                DialogSystem.Instance.ShowDialog(attacker.FighterData.fighterName + "wins the fight!");
-                FighterWin(attacker);
+                if (fighters.Count == 1)
+                {
+                    DialogSystem.Instance.ShowDialog(attacker.FighterData.fighterName + "Wins the fight!");
+                    FighterWin(attacker);
+                }
             }
             yield return new WaitForSeconds(1.5f);
         }

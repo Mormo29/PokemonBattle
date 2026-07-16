@@ -30,7 +30,7 @@ MonoBehaviour:
     chargeParticles: {fileID: 4418111963949774201, guid: bbf70dc0e6b19f549a85333a9049d5c8, type: 3}
     attackParticles: {fileID: 1935215301441297543, guid: cb8956e267bc6b445a1777796a242d5d, type: 3}
   chargeTime: 2
-  appearParticles: {fileID: 4418111963949774201, guid: bbf70dc0e6b19f549a85333a9049d5c8, type: 3}
+  appearParticles: {fileID: 5059868061389064990, guid: 4e32f29ce1a15b043895a47e9da6c3dd, type: 3}
   appearSoundName: Gengar_appear
   damageSoundName: Gengar_damage
   deadSoundName: Gengar_dead
